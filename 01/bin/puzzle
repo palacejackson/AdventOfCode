@@ -1,0 +1,21 @@
+$LOAD_PATH << File.join(__dir__, '..', 'lib')
+
+require 'puzzle'
+
+input_file = File.join(__dir__, '..', 'input.txt')
+input = File.readlines(input_file).map(&:chomp)
+
+# input = [
+#   "two1nine",
+#   "eightwothree",
+#   "abcone2threexyz",
+#   "xtwone3four",
+#   "4nineeightseven2",
+#   "zoneight234",
+#   "7pqrstsixteen"
+# ]
+
+puzzle = Puzzle.new
+
+puts puzzle.part1(input)
+puts puzzle.part2(input)
